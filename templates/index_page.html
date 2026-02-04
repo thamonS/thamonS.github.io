@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiHealthNewsVerify | AI Verification System</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_page.css') }}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">
+                <i class="fas fa-heartbeat text-success"></i> ThaiHealthNewsVerify
+            </a>
+            <span class="navbar-text text-white-50 small">
+                Senior Project 2026
+            </span>
+        </div>
+    </nav>
+
+    <header class="hero-section text-white text-center d-flex align-items-center">
+        <div class="container">
+            <span class="badge badge-pill badge-light text-primary mb-3 px-3 py-2">Senior Project 2026</span>
+            <h1 class="display-4 font-weight-bold project-title-en">
+                Development of an Automated Health News<br>
+                Verification System in Thai Using<br>
+                Large Language Models and<br>
+                Retrieval-Augmented Generation
+            </h1>
+            <p class="lead mt-3 project-title-th">
+                การพัฒนาระบบตอบกลับอัตโนมัติในการตรวจสอบข่าวสุขภาพภาษาไทย<br>
+                ด้วย<strong>แบบจำลองภาษาขนาดใหญ่</strong>ร่วมกับ<strong>เทคนิคการสร้างคำตอบจากการดึงข้อมูล</strong>
+            </p>
+            <div class="mt-4">
+                <a href="#demo" class="btn btn-light btn-lg font-weight-bold shadow-sm rounded-pill px-5">
+                    ทดลองตรวจสอบข่าว (Try Demo)
+                </a>
+                <a href="https://github.com/thamonS/ThaiHealthDetect.git" target="_blank" class="btn btn-outline-light btn-lg rounded-pill ml-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        
+        <section class="section-padding text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-3 author-block">
+                    <div class="img-placeholder mx-auto shadow">
+                        <img src="{{ url_for('static', filename='images/pornwalai_pic.jpg') }}" alt="Student 1">
+                    </div>
+                    <h6 class="mt-3 font-weight-bold">Pornwalai Foxall</h6>
+                    <small class="text-muted">Student</small>
+                </div>
+                
+                <div class="col-md-3 author-block">
+                    <div class="img-placeholder mx-auto shadow">
+                        <img src="{{ url_for('static', filename='images/thamon_pic.jpg') }}" alt="Student 2">
+                    </div>
+                    <h6 class="mt-3 font-weight-bold">Thamon Siriprahmanakul</h6>
+                    <small class="text-muted">Student</small>
+                </div>
+
+                <div class="col-md-3 author-block advisor">
+                    <div class="img-placeholder mx-auto shadow-sm">
+                        <img src="{{ url_for('static', filename='images/AjYa.jpg') }}" alt="Advisor">
+                    </div>
+                    <h6 class="mt-3 font-weight-bold">Pitchaya Wiratchotisatian</h6>
+                    <small class="text-muted">Project Advisor</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="card border-0 shadow-sm paper-card">
+                <div class="card-body p-5">
+                    <h5 class="text-uppercase text-primary font-weight-bold mb-3">Abstract</h5>
+                    <p class="text-muted text-justify">
+                        This project aims to combat health-related misinformation in the Thai language by leveraging Large Language Models (LLMs) combined with Retrieval-Augmented Generation (RAG). The system cross-references user input against a trusted database to ensure accuracy and reliability...
+                    </p>
+                    <div class="skeleton-wrapper mt-4">
+                        <div class="skeleton-line w-100"></div>
+                        <div class="skeleton-line w-75"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding text-center">
+            <h4 class="section-header mb-5">WORKFLOW</h4>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="workflow-box p-4 bg-white shadow-sm rounded border-top-primary">
+                        <h6 class="text-muted mb-3">Data Preprocessing</h6>
+                        <img src="{{ url_for('static', filename='images/Workflow PJ_1.png') }}" class="img-fluid rounded" alt="Data Workflow">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="workflow-box p-4 bg-white shadow-sm rounded border-top-success">
+                        <h6 class="text-muted mb-3">System</h6>
+                        <img src="{{ url_for('static', filename='images/Workflow PJ_2.png') }}" class="img-fluid rounded" alt="System Workflow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="section-padding mt-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 overflow-hidden">
+                        <div class="card-header bg-gradient-primary text-white text-center py-4">
+                            <h4 class="mb-0"><i class="fas fa-robot mr-2"></i>AI Fact-Checker</h4>
+                            <small class="text-white-50">กรอกข้อความข่าวสุขภาพเพื่อตรวจสอบความถูกต้อง</small>
+                        </div>
+                        <div class="card-body p-4 bg-light">
+                            <div class="form-group">
+                                <label for="newsInput" class="text-secondary font-weight-bold ml-1">ข้อความข่าว (Thai Input):</label>
+                                <textarea id="newsInput" class="form-control form-control-lg shadow-sm border-0" rows="5" placeholder="ตัวอย่าง: น้ำมะนาวผสมโซดาช่วยรักษามะเร็งระยะสุดท้ายได้..."></textarea>
+                                <div class="invalid-feedback">กรุณากรอกข้อความที่ต้องการตรวจสอบ</div>
+                            </div>
+                            
+                            <button id="verifyBtn" class="btn btn-primary btn-block btn-lg shadow mt-4 rounded-pill transition-3d">
+                                <span id="btnLoader" class="spinner-border spinner-border-sm mr-2" style="display:none;"></span>
+                                <span id="btnText">Verify News (ตรวจสอบ)</span>
+                            </button>
+                        </div>
+                        
+                        <div id="resultArea" class="card-footer p-4" style="display:none;">
+                            <div class="d-flex align-items-start">
+                                <div class="mr-4 text-center">
+                                    <i id="resIcon" class="fas fa-3x"></i>
+                                </div>
+                                <div>
+                                    <h4 id="resStatus" class="font-weight-bold mb-2">--</h4>
+                                    <div class="badge badge-light border mb-2 p-2">
+                                        Confidence: <span id="resConf" class="font-weight-bold">--</span>
+                                    </div>
+                                    <p class="mb-0 text-dark mt-2 p-3 bg-white rounded shadow-sm border-left-thick">
+                                        <i class="fas fa-info-circle text-secondary mr-1"></i> 
+                                        <span id="resReason">--</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-muted py-5 mt-5 border-top bg-white">
+                    <div class="container">
+                        <p class="mb-2 font-weight-bold text-dark">ThaiHealthNewsVerify Project 2026</p>
+                        <small class="d-block mb-3">Faculty of Science | Statistics and Data Science</small>
+                
+                        <hr class="w-50 mx-auto my-4"> 
+                
+                        <div class="credit-section small text-black-50">
+                            <p class="mb-0">
+                                The website template was adapted from 
+                                <a href="http://mgharbi.com/" target="_blank" class="text-decoration-none font-weight-bold text-secondary">
+                                    Michaël Gharbi
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+    </div> <script src="{{ url_for('static', filename='script_page.js') }}"></script>
+</body>
+</html>
