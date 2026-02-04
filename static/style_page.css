@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #00b894; /* Mint Green */
+    --accent-blue: #0984e3;
+    --bg-light: #f4f7f6;
+    --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    color: #444;
+    background-color: var(--bg-light);
+    padding-top: 56px; /* Space for fixed navbar */
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6, .project-title-en {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--gradient-primary);
+    padding: 120px 0 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: -50px; /* Overlap effect */
+}
+
+.project-title-en {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.project-title-th {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Images & Placeholders */
+.img-placeholder {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding: 4px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-block:hover .img-placeholder {
+    transform: translateY(-5px);
+    border: 3px solid var(--accent-color);
+}
+
+/* Workflow Boxes */
+.workflow-box {
+    transition: transform 0.3s;
+    height: 100%;
+}
+.workflow-box:hover {
+    transform: translateY(-5px);
+}
+.border-top-primary { border-top: 4px solid var(--primary-color) !important; }
+.border-top-success { border-top: 4px solid var(--accent-color) !important; }
+
+/* Abstract Card */
+.paper-card {
+    background: #fff;
+    border-left: 5px solid var(--accent-blue);
+}
+
+/* Form Elements */
+textarea.form-control {
+    resize: none;
+    font-size: 1.1rem;
+}
+textarea.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 184, 148, 0.25);
+}
+
+.bg-gradient-primary {
+    background: var(--gradient-primary);
+}
+
+/* Result Styles */
+.alert-success-custom {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-top: 5px solid #198754;
+}
+
+.alert-danger-custom {
+    background-color: #f8d7da;
+    color: #842029;
+    border-top: 5px solid #dc3545;
+}
+
+.border-left-thick {
+    border-left: 4px solid #ddd;
+}
+
+/* Animations */
+.skeleton-line {
+    height: 10px;
+    background: #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.transition-3d:active {
+    transform: translateY(2px);
+    box-shadow: none !important;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
