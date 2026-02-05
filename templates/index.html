@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style_page.css') }}">
+    <link rel="stylesheet" href="static/style_page.css">
 </head>
 <body>
 
@@ -53,7 +53,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-3 author-block">
                     <div class="img-placeholder mx-auto shadow">
-                        <img src="{{ url_for('static', filename='images/pornwalai_pic.jpg') }}" alt="Student 1">
+                        <img src="static/images/pornwalai_pic.jpg" alt="Student 1">
                     </div>
                     <h6 class="mt-3 font-weight-bold">Pornwalai Foxall</h6>
                     <small class="text-muted">Student</small>
@@ -61,7 +61,7 @@
                 
                 <div class="col-md-3 author-block">
                     <div class="img-placeholder mx-auto shadow">
-                        <img src="{{ url_for('static', filename='images/thamon_pic.jpg') }}" alt="Student 2">
+                        <img src="static/images/thamon_pic.jpg" alt="Student 2">
                     </div>
                     <h6 class="mt-3 font-weight-bold">Thamon Siriprahmanakul</h6>
                     <small class="text-muted">Student</small>
@@ -69,7 +69,7 @@
 
                 <div class="col-md-3 author-block advisor">
                     <div class="img-placeholder mx-auto shadow-sm">
-                        <img src="{{ url_for('static', filename='images/AjYa.jpg') }}" alt="Advisor">
+                        <img src="static/images/AjYa.jpg" alt="Advisor">
                     </div>
                     <h6 class="mt-3 font-weight-bold">Pitchaya Wiratchotisatian</h6>
                     <small class="text-muted">Project Advisor</small>
@@ -98,13 +98,13 @@
                 <div class="col-md-6 mb-4">
                     <div class="workflow-box p-4 bg-white shadow-sm rounded border-top-primary">
                         <h6 class="text-muted mb-3">Data Preprocessing</h6>
-                        <img src="{{ url_for('static', filename='images/Workflow PJ_1.png') }}" class="img-fluid rounded" alt="Data Workflow">
+                        <img src="static/images/Workflow PJ_1.png" class="img-fluid rounded" alt="Data Workflow">
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="workflow-box p-4 bg-white shadow-sm rounded border-top-success">
                         <h6 class="text-muted mb-3">System</h6>
-                        <img src="{{ url_for('static', filename='images/Workflow PJ_2.png') }}" class="img-fluid rounded" alt="System Workflow">
+                        <img src="static/images/Workflow PJ_2.png" class="img-fluid rounded" alt="System Workflow">
                     </div>
                 </div>
             </div>
@@ -171,6 +171,6 @@
                     </div>
                 </footer>
 
-    </div> <script src="{{ url_for('static', filename='script_page.js') }}"></script>
+    </div> <script src="static/script_page.js"></script>
 </body>
 </html>
